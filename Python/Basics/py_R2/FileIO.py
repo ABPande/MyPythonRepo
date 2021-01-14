@@ -1,0 +1,25 @@
+#test.txt
+myfile = open("file.txt",'w')
+myfile.write ("Hi\n")
+myfile.write ("Hi Abhijit\n")
+myfile.write ("Bye Abhijit Pande\n")
+myfile.close()
+myfile = open ("file.txt", "r")
+output = myfile.read()
+print (output)
+myfile.seek(0)
+output = myfile.readlines()
+print (output)
+myfile.close()
+
+with open("file.txt","r") as myfile:
+	contents = myfile.read()
+	print (contents)
+myfile.close()
+with open("file.txt","a") as myfile:
+	myfile.write("Adding a line")
+myfile.close()
+myfile = open ("file.txt", "r")
+output = myfile.read()
+print (output)
+myfile.close()
